@@ -28,6 +28,166 @@
         static void Main(string[] args)
         {
             
+          
+            Threes();
+            Thousand();
+            Equal();
+            Even();
+            Negative();
+            Voter();
+            ThisNumber();
+            Multiply();
         }
+
+        public static void Thousand()
+        {
+            for (int i = 1000; i >= -1000; i--)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        public static void Threes()
+        {
+            for (int i = 3; i <= 999; i += 3)
+            {
+                Console.WriteLine(i);
+            }
+
+           
+        }
+
+        public static void Equal()
+        {
+            var firstNumber = 4;
+            var secondNumber = 5;
+
+            if (firstNumber == secondNumber)
+            {
+                Console.WriteLine("They are equal.");
+            }
+            else
+            {
+                Console.WriteLine("Not equal!");
+            }
+        }
+
+        public static void Even()
+        {
+            var theNumber = 5;
+
+            if (theNumber % 2 == 0)
+            {
+                Console.WriteLine($" {theNumber} is even");
+            }
+
+            else
+            {
+                Console.WriteLine($"{theNumber} is odd");
+            }
+        }
+
+        public static void Negative()
+        {
+            var thisNumber = -555;
+
+            if (thisNumber < 0)
+            {
+                Console.WriteLine($"{thisNumber} is a negative number");
+            }
+            else
+            {
+                Console.WriteLine($"{thisNumber} is a posotive number.");
+            }
+        }
+        
+        public static void Voter()
+        {
+            
+            Console.WriteLine("State your age");
+            var answer = int.Parse(Console.ReadLine());
+
+            if (answer <= 17)
+            {
+                Console.WriteLine("You're a bit too young to vote.");
+            }
+            else 
+            {
+                Console.WriteLine("You're good to go!");
+            }
+
+                
+        }
+
+        public static void ThisNumber()
+
+        {
+            int userGuess;
+            do
+            {
+                Console.WriteLine("Guess a number within the range I'm thinking of...");
+                userGuess = int.Parse(Console.ReadLine());
+
+                if (userGuess < -10)
+
+                {
+                    Console.WriteLine($"Try going higher, {userGuess} is not in the range.");
+                }
+
+                else if (userGuess > 10)
+                {
+                    Console.WriteLine($"The number {userGuess} is too high, try again");
+                }
+
+                else
+                {
+                    Console.WriteLine($"{userGuess} is within the range, nice job!");
+                }
+
+            }
+            while (userGuess < -10 || userGuess > 10);
+        }
+
+
+        public static void Multiply()
+        {
+            Console.WriteLine("Input a number between 1 and 12");
+            int thisNumber = int.Parse(Console.ReadLine());
+
+            for (int i = 3; i < 99; i++)
+            {
+                Console.WriteLine($"{thisNumber} x {i} = {thisNumber*i}");
+            }
+                
+                
+        }
+        
+
+
+            
+
+        
+
+
+           
+
+
+        
+            
+        
+        
+        
+                
+                
+
+            
+
+
+        
+                
+            
+        
+
+
     }
 }
